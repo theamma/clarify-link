@@ -1,6 +1,6 @@
 # clarify-link
 
-`clarify-link` is a tool to reverse obfuscated hyperlinks. Initially, only a regex for links obfuscated by /Cisco Ironport/ is supported. 
+`clarify-link` is a tool to reverse obfuscated hyperlinks. Initially, only a regex for *Cisco Ironport* is supported. You're welcome to submit a regex for other obfuscations. 
 
 ## Requirements
 In order to build a binary, you need the Rust language and the package manager `cargo`.  
