@@ -1,6 +1,6 @@
 # clarify-link
 
-`clarify-link` is a tool to reverse obfuscated hyperlinks 
+`clarify-link` is a tool to reverse obfuscated hyperlinks. Initially, only a regex for links obfuscated by /Cisco Ironport/ is supported. 
 
 ## Requirements
 In order to build a binary, you need the Rust language and the package manager `cargo`.  
@@ -18,26 +18,17 @@ $ git clone https://github.com/theamma/clarify-link
 $ cd clarify-link && cargo build --release
 ```
 
-## Configuration
-Ther is no configuration needed (yet). 
-
-Please run `clarify-link --help` for available options.
+## Usage
 ```
-clarify-link 0.9.3
-Martin Bley <martin.bley@mb-oss.de>
-Clarify obfuscated hyperlinks
+$ clarify-link "BLOCKEDwww[.]example[.]com/foo/index[.]htmlBLOCKED"
+https://www.example.com/foo/index.html
+```
+The schema part defaults to /https/. If you want to change it, use the `-p` switch. To completely disable the schema part, use `-s`. 
 
-USAGE:
-    clarify-link [FLAGS] [OPTIONS] <obfuscated-link>
+Please run `clarify-link --help` for all available options.
 
-FLAGS:
-    -h, --help           Prints help information
-    -s, --skip-schema    Don't put schema part in the url
-    -V, --version        Prints version information
+## Configuration
+There is no configuration needed (yet). 
 
-OPTIONS:
-    -p, --proto <proto>    Schema part of the url (http, https, ftp, ...) [default: https]
-
-ARGS:
-    <obfuscated-link>    
-``` 
+## License 
+This project is licensed under the GPLv3. See the [LICENSE](LICENSE) file for details.
