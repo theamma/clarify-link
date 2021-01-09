@@ -23,7 +23,7 @@ $ cd clarify-link && cargo build --release
 $ clarify-link "BLOCKEDwww[.]example[.]com/foo/index[.]htmlBLOCKED"
 https://www.example.com/foo/index.html
 ```
-The schema part defaults to /https/. If you want to change it, use the `-p` switch. To completely disable the schema part, use `-s`. 
+The schema part defaults to *https*. If you want to change it, use the `-p` switch. To completely disable the schema part, use `-s`. 
 
 Please run `clarify-link --help` for all available options.
 
